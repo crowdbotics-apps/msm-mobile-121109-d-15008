@@ -33,11 +33,13 @@ export default class Blank extends React.Component {
         onPress={() => alert("Pressed!")}
       />
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         style={styles.Switch_3}
         value={this.state.Switch_3}
         onValueChange={nextChecked => this.setState({ Switch_3: nextChecked })}
       />
       <DateTimePicker
+        showIcon={false}
         style={styles.DateTimePicker_4}
         date={this.state.DateTimePicker_4}
         onDateChange={selectedDate =>
@@ -71,6 +73,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderBottomWidth: 2
   },
+
   View_1: {},
   Button_2: { width: 100, height: 29, paddingTop: 10, borderWidth: 5 },
   Switch_3: { width: 100, height: 28, alignSelf: "center", borderWidth: 3 },
@@ -79,5 +82,9 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     borderWidth: 2,
     borderBottomWidth: 0
-  }
+  },
+  View_1: {},
+  Button_2: { width: 100, height: 29, paddingTop: 10, borderWidth: 5 },
+  Switch_3: { width: 100, height: 28, alignSelf: "center", borderWidth: 3 },
+  DateTimePicker_4: { width: 100, alignSelf: "flex-end", borderWidth: 3 }
 })
