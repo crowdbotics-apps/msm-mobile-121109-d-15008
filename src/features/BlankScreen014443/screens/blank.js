@@ -33,11 +33,13 @@ export default class Blank extends React.Component {
         onPress={() => alert("Pressed!")}
       />
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         style={styles.Switch_3}
         value={this.state.Switch_3}
         onValueChange={nextChecked => this.setState({ Switch_3: nextChecked })}
       />
       <DateTimePicker
+        showIcon={false}
         style={styles.DateTimePicker_4}
         date={this.state.DateTimePicker_4}
         onDateChange={selectedDate =>
@@ -184,6 +186,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 3,
     borderBottomWidth: 3
   },
+
   View_1: {},
   Button_2: {
     width: 100,
@@ -195,6 +198,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     borderBottomWidth: 0
   },
+
   Switch_3: {
     width: 100,
     height: 28,
@@ -205,6 +209,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     borderBottomWidth: 0
   },
+
   DateTimePicker_4: {
     width: 100,
     alignSelf: "flex-end",
@@ -213,5 +218,35 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0
+  },
+  View_1: {},
+  Button_2: {
+    width: 100,
+    height: 29,
+    paddingTop: 10,
+    borderWidth: 2,
+    borderLeftWidth: 2,
+    borderRightWidth: 2,
+    borderTopWidth: 2,
+    borderBottomWidth: 2
+  },
+  Switch_3: {
+    width: 100,
+    height: 28,
+    alignSelf: "center",
+    borderWidth: 3,
+    borderLeftWidth: 3,
+    borderRightWidth: 3,
+    borderTopWidth: 3,
+    borderBottomWidth: 3
+  },
+  DateTimePicker_4: {
+    width: 100,
+    alignSelf: "flex-end",
+    borderWidth: 2,
+    borderLeftWidth: 2,
+    borderRightWidth: 2,
+    borderTopWidth: 2,
+    borderBottomWidth: 2
   }
 })
